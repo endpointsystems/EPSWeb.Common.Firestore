@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPSWeb.Common.Firestore", "EPSWeb.Common.Firestore\EPSWeb.Common.Firestore.csproj", "{40D2EDFF-6923-42C1-8A1D-145DE94C2D67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPSWeb.Common.Firestore.Test", "EPSWeb.Common.Firestore.Test\EPSWeb.Common.Firestore.Test.csproj", "{E301E703-3AA4-46AA-824D-53A07A9C0B29}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{40D2EDFF-6923-42C1-8A1D-145DE94C2D67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40D2EDFF-6923-42C1-8A1D-145DE94C2D67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40D2EDFF-6923-42C1-8A1D-145DE94C2D67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40D2EDFF-6923-42C1-8A1D-145DE94C2D67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E301E703-3AA4-46AA-824D-53A07A9C0B29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E301E703-3AA4-46AA-824D-53A07A9C0B29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E301E703-3AA4-46AA-824D-53A07A9C0B29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E301E703-3AA4-46AA-824D-53A07A9C0B29}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
