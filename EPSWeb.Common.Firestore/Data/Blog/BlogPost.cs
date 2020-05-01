@@ -17,6 +17,11 @@ namespace EPSWeb.Common.Firestore.Data.Blog
             [FirestoreProperty] public string slug { get; set; }
 
             /// <summary>
+            /// Gets or sets the author name.
+            /// </summary>
+            [FirestoreProperty] public string author { get; set; }
+
+            /// <summary>
             /// Gets or sets the language identifier
             /// </summary>
             [FirestoreProperty] public int languageId { get; set; }
@@ -45,6 +50,11 @@ namespace EPSWeb.Common.Firestore.Data.Blog
             /// Gets or sets a value indicating whether the blog post comments are allowed
             /// </summary>
             [FirestoreProperty] public bool allowComments { get; set; }
+
+            /// <summary>
+            /// gets or sets the blog image for the header and title
+            /// </summary>
+            [FirestoreProperty] public string mainImage { get; set; }
 
             /// <summary>
             /// Gets or sets the blog tags

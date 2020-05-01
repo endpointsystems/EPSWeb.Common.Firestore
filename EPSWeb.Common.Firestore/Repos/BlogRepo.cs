@@ -21,10 +21,12 @@ namespace EPSWeb.Common.Firestore.Repos
             return post;
         }
 
-        public async Task<BlogPost> GetPost(string postId)
+        public async Task<BlogPost> GetPost(string slug)
         {
-            var ret = await db.Collection(config.BlogPath).Document(postId).GetSnapshotAsync();
-            return ret.ConvertTo<BlogPost>();
+            var query = db.Collection("evf").WhereEqualTo("slug", slug);
+            var ret = await query.GetSnapshotAsync();
+            return ret.Count < 1 ? null :
+                ret.Select(doc => doc.ConvertTo<BlogPost>()).FirstOrDefault();
         }
 
         /// <summary>
