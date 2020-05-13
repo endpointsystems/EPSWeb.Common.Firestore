@@ -11,7 +11,7 @@
         <RepositoryUrl>https://github.com/endpointsystems/EPSWeb.Common.Firestore</RepositoryUrl>
         <RepositoryType>GitHub</RepositoryType>
         <PackageTags>ASP.NET Core, Firestore, c#</PackageTags>
-        <PackageVersion>0.0.1</PackageVersion>
+        <PackageVersion>0.0.2</PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>

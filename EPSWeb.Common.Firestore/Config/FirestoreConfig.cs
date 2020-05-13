@@ -19,6 +19,9 @@ namespace EPSWeb.Common.Firestore.Config
         /// </summary>
         public int EmulatorPort { get; set; }
 
-        public string BlogPath { get; set; }
+        /// <summary>
+        /// The root collection for the website. Blog will show up in a page called "blog".
+        /// </summary>
+        public string Root { get; set; }
     }
 }
