@@ -20,19 +20,20 @@ namespace EPSWeb.Common.Firestore.Test
         private readonly List<BlogPost> posts;
         public BlogTest(ITestOutputHelper outputHelper)
         {
+            //for consistency:
+            //gcloud beta emulators firestore start --host-port=localhost:8888 --
             Environment.SetEnvironmentVariable("FIRESTORE_EMULATOR_HOST","localhost:8888");
-            Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS","/your/credential/key.json");
+            //Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS","/your/credential/key.json");
             output = outputHelper;
             log = output.BuildLoggerFor<BlogRepo>();
 
-            //gcloud beta emulators firestore start --host-port=localhost:8888
             blog = new BlogRepo(new FirestoreConfig
             {
                 Root = "blogtest",
-                Emulator = false,
+                Emulator = true,
                 EmulatorUrl = "http://localhost",
                 EmulatorPort = 8888,
-                ProjectId = "your-project-name"
+                ProjectId = "epsweb-217515"
             }, log);
 
             posts = new List<BlogPost>();
