@@ -1,5 +1,6 @@
 using System;
 using EPSWeb.Common.Firestore.Config;
+using Google.Api.Gax;
 using Google.Cloud.Firestore;
 using Microsoft.Extensions.Logging;
 

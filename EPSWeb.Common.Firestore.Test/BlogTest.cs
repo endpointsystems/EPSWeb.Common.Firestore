@@ -28,8 +28,8 @@ namespace EPSWeb.Common.Firestore.Test
             //gcloud beta emulators firestore start --host-port=localhost:8888
             blog = new BlogRepo(new FirestoreConfig
             {
+                Root = "blogtest",
                 Emulator = false,
-                BlogPath = "blog",
                 EmulatorUrl = "http://localhost",
                 EmulatorPort = 8888,
                 ProjectId = "your-project-name"
