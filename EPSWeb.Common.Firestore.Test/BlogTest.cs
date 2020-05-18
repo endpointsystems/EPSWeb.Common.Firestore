@@ -23,6 +23,7 @@ namespace EPSWeb.Common.Firestore.Test
             //for consistency:
             //gcloud beta emulators firestore start --host-port=localhost:8888 --
             Environment.SetEnvironmentVariable("FIRESTORE_EMULATOR_HOST","localhost:8888");
+            Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS","/raid/repos/epsweb-firestore/EPSWeb.Common.Firestore/epsweb-217515-5631b4260996.json");
             //Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS","/your/credential/key.json");
             output = outputHelper;
             log = output.BuildLoggerFor<BlogRepo>();
@@ -31,7 +32,7 @@ namespace EPSWeb.Common.Firestore.Test
             {
                 Root = "blogtest",
                 Emulator = true,
-                EmulatorUrl = "http://localhost",
+                EmulatorUrl = "http://localhost:8888",
                 EmulatorPort = 8888,
                 ProjectId = "epsweb-217515"
             }, log);
@@ -42,9 +43,9 @@ namespace EPSWeb.Common.Firestore.Test
             {
                 posts.Add(new BlogPost
                 {
-                    body = Lorem.Paragraphs(500, 250, 3).ToString(),
+                    body = Lorem.Paragraphs(500, 250, 3).ToCombinedString(),
                     overview = Lorem.Sentence(10),
-                    tags = Lorem.Words(5),
+                    tags = Lorem.Words(5).Split(',').ToCombinedString(),
                     title = $"blog post {i}",
                     slug = $"blog-post-{i}"
                 });

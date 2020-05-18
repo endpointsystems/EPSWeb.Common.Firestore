@@ -2,6 +2,7 @@ using System;
 using EPSWeb.Common.Firestore.Config;
 using Google.Api.Gax;
 using Google.Cloud.Firestore;
+using Grpc.Core;
 using Microsoft.Extensions.Logging;
 
 namespace EPSWeb.Common.Firestore.Repos
@@ -25,6 +26,7 @@ namespace EPSWeb.Common.Firestore.Repos
                 var fb = new FirestoreDbBuilder
                 {
                     ProjectId = config.ProjectId,
+                    //Endpoint = config.EmulatorUrl,
                     EmulatorDetection = EmulatorDetection.EmulatorOnly
                 };
 
